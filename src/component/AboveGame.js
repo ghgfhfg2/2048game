@@ -8,7 +8,7 @@ function AboveGame() {
           Join the tiles, get to <strong>2048!</strong>
           <br />
           <a href="javascript:void(0)" className="how-to-play-link">
-            How to play →
+            How to play
           </a>
         </p>
         <a className="restart-button">New Game</a>
