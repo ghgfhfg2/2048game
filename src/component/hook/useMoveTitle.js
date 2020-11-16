@@ -1,8 +1,13 @@
 import { useEffect } from "react";
 import { addKeyObserver } from "../util/keyboard";
 
-export default function useMoveTitle() {
-  function moveAndAdd({ x, y }) {}
+export default function useMoveTitle({ tileList, setTileList }) {
+  function moveAndAdd({ x, y }) {
+    const newTileList = moveTile({ tileList, x, y });
+    const newTile = makeTile(newTileList);
+    newTileList.push(newTile);
+    setTileList(newTileList);
+  }
   function moveUp() {
     moveAndAdd({ x: 0, y: -1 });
   }
